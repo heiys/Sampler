@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		025CE05087AC5FB8268DEC08 /* Pods_Sampler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4121C48C7D7EBEE5AA4054ED /* Pods_Sampler.framework */; };
 		E41481291A82507100F207B1 /* CanvaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E41481281A82507100F207B1 /* CanvaseViewController.m */; };
+		E4423F071C746ED800F03B6A /* CommonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4423F021C746ED800F03B6A /* CommonTableViewCell.m */; };
+		E4423F081C746ED800F03B6A /* CommonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4423F041C746ED800F03B6A /* CommonTableViewController.m */; };
+		E4423F091C746ED800F03B6A /* CommonTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E4423F061C746ED800F03B6A /* CommonTableViewSection.m */; };
+		E4423F0D1C7473FB00F03B6A /* CommonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E4423F0C1C7473FB00F03B6A /* CommonObject.m */; };
 		E485E74A1A23731900BE0A55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E485E7491A23731900BE0A55 /* main.m */; };
 		E485E74D1A23731A00BE0A55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E485E74C1A23731A00BE0A55 /* AppDelegate.m */; };
 		E485E7501A23731A00BE0A55 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E485E74F1A23731A00BE0A55 /* RootViewController.m */; };
@@ -35,8 +40,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4121C48C7D7EBEE5AA4054ED /* Pods_Sampler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sampler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		565D4A70615DDDFB6EF0ADD0 /* Pods-Sampler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sampler.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sampler/Pods-Sampler.release.xcconfig"; sourceTree = "<group>"; };
 		E41481271A82507100F207B1 /* CanvaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CanvaseViewController.h; path = Canvas/CanvaseViewController.h; sourceTree = "<group>"; };
 		E41481281A82507100F207B1 /* CanvaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CanvaseViewController.m; path = Canvas/CanvaseViewController.m; sourceTree = "<group>"; };
+		E4423F011C746ED800F03B6A /* CommonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTableViewCell.h; sourceTree = "<group>"; };
+		E4423F021C746ED800F03B6A /* CommonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTableViewCell.m; sourceTree = "<group>"; };
+		E4423F031C746ED800F03B6A /* CommonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTableViewController.h; sourceTree = "<group>"; };
+		E4423F041C746ED800F03B6A /* CommonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTableViewController.m; sourceTree = "<group>"; };
+		E4423F051C746ED800F03B6A /* CommonTableViewSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTableViewSection.h; sourceTree = "<group>"; };
+		E4423F061C746ED800F03B6A /* CommonTableViewSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTableViewSection.m; sourceTree = "<group>"; };
+		E4423F0B1C7473FB00F03B6A /* CommonObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonObject.h; path = Common/Object/CommonObject.h; sourceTree = "<group>"; };
+		E4423F0C1C7473FB00F03B6A /* CommonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonObject.m; path = Common/Object/CommonObject.m; sourceTree = "<group>"; };
 		E485E7441A23731900BE0A55 /* Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sampler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E485E7481A23731900BE0A55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E485E7491A23731900BE0A55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,6 +78,7 @@
 		E4E41A631A7F0B850097776E /* SamplerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplerHelper.h; sourceTree = "<group>"; };
 		E4E41A641A7F0B850097776E /* SamplerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SamplerHelper.m; sourceTree = "<group>"; };
 		E4E41A681A7F0E370097776E /* Sampler-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sampler-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		F68DB123E1D7B71F10737377 /* Pods-Sampler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sampler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sampler/Pods-Sampler.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				025CE05087AC5FB8268DEC08 /* Pods_Sampler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +100,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D44A2909DB066FE78BBC93B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4121C48C7D7EBEE5AA4054ED /* Pods_Sampler.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A091D180AD8D81391D6A5CE4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F68DB123E1D7B71F10737377 /* Pods-Sampler.debug.xcconfig */,
+				565D4A70615DDDFB6EF0ADD0 /* Pods-Sampler.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E41481261A824FEE00F207B1 /* Canvas */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +133,37 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
+		E4423F001C746ED800F03B6A /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				E4423F011C746ED800F03B6A /* CommonTableViewCell.h */,
+				E4423F021C746ED800F03B6A /* CommonTableViewCell.m */,
+				E4423F031C746ED800F03B6A /* CommonTableViewController.h */,
+				E4423F041C746ED800F03B6A /* CommonTableViewController.m */,
+				E4423F051C746ED800F03B6A /* CommonTableViewSection.h */,
+				E4423F061C746ED800F03B6A /* CommonTableViewSection.m */,
+			);
+			name = Table;
+			path = Common/Table;
+			sourceTree = "<group>";
+		};
+		E4423F0A1C7473CF00F03B6A /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				E4423F0B1C7473FB00F03B6A /* CommonObject.h */,
+				E4423F0C1C7473FB00F03B6A /* CommonObject.m */,
+			);
+			name = Object;
+			sourceTree = "<group>";
+		};
 		E485E73B1A23731900BE0A55 = {
 			isa = PBXGroup;
 			children = (
 				E485E7461A23731900BE0A55 /* Sampler */,
 				E485E7601A23731A00BE0A55 /* SamplerTests */,
 				E485E7451A23731900BE0A55 /* Products */,
+				A091D180AD8D81391D6A5CE4 /* Pods */,
+				4D44A2909DB066FE78BBC93B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,6 +257,8 @@
 		E4E41A661A7F0B8B0097776E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E4423F0A1C7473CF00F03B6A /* Object */,
+				E4423F001C746ED800F03B6A /* Table */,
 				E414812A1A82521600F207B1 /* Data */,
 				E4E41A631A7F0B850097776E /* SamplerHelper.h */,
 				E4E41A641A7F0B850097776E /* SamplerHelper.m */,
@@ -212,9 +273,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E485E7671A23731A00BE0A55 /* Build configuration list for PBXNativeTarget "Sampler" */;
 			buildPhases = (
+				EF7DFD2D9A174117C1A89B7E /* Check Pods Manifest.lock */,
 				E485E7401A23731900BE0A55 /* Sources */,
 				E485E7411A23731900BE0A55 /* Frameworks */,
 				E485E7421A23731900BE0A55 /* Resources */,
+				125ECB15944CC8EBFE36E141 /* Embed Pods Frameworks */,
+				C69B57180FAB6D8C033898EF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,13 +366,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		125ECB15944CC8EBFE36E141 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sampler/Pods-Sampler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C69B57180FAB6D8C033898EF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sampler/Pods-Sampler-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF7DFD2D9A174117C1A89B7E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E485E7401A23731900BE0A55 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4423F081C746ED800F03B6A /* CommonTableViewController.m in Sources */,
+				E4423F0D1C7473FB00F03B6A /* CommonObject.m in Sources */,
 				E4B77A801A248C540072E221 /* SampleData.m in Sources */,
 				E4B77A881A2496500072E221 /* SampleListTableViewCell.m in Sources */,
+				E4423F071C746ED800F03B6A /* CommonTableViewCell.m in Sources */,
+				E4423F091C746ED800F03B6A /* CommonTableViewSection.m in Sources */,
 				E41481291A82507100F207B1 /* CanvaseViewController.m in Sources */,
 				E485E7501A23731A00BE0A55 /* RootViewController.m in Sources */,
 				E485E76F1A2373A000BE0A55 /* EditTextViewController.m in Sources */,
@@ -435,6 +551,7 @@
 		};
 		E485E7681A23731A00BE0A55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F68DB123E1D7B71F10737377 /* Pods-Sampler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: song Hur (LW7NFZZ8R9)";
@@ -448,6 +565,7 @@
 		};
 		E485E7691A23731A00BE0A55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 565D4A70615DDDFB6EF0ADD0 /* Pods-Sampler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "Sampler-Prefix.pch";

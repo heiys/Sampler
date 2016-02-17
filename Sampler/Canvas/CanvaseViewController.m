@@ -31,11 +31,18 @@
 - (IBAction)respondsToAddView:(id)sender
 {
 	//메뉴시트 띄우기
-	UIAlertAction* addViewAction = [UIAlertAction actionWithTitle:lstr(@"ViewItem") style:UIAlertActionStyleDefault
-														  handler:^(UIAlertAction * action) {}];
+	UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:lstr(@"Cancel") style:UIAlertActionStyleCancel
+														 handler:nil];
+	
+	UIAlertAction* addViewAction = [UIAlertAction actionWithTitle:lstr(@"View") style:UIAlertActionStyleDefault
+														 handler:^(UIAlertAction * action) {
+															 [self addObjectInCanvas:ObjTypeView];
+														 }];
+
 	
 	UIAlertController * addMenuAlertViewController = [UIAlertController alertControllerWithTitle:lstr(@"SelectMenuItem") message:nil preferredStyle:UIAlertControllerStyleActionSheet];
 	[addMenuAlertViewController addAction:addViewAction];
+	[addMenuAlertViewController addAction:cancelAction];
 	[self presentViewController:addMenuAlertViewController animated:YES completion:nil];
 }
 
@@ -60,6 +67,22 @@
 		if (buttonIndex)
 			[self dismissViewControllerAnimated:YES completion:nil];
 	}
+}
+
+- (void)addObjectInCanvas:(ObjectType) objType {
+	
+	if (objType == ObjTypeView) {
+		CommonObject * view = [[CommonObject alloc] initWithFrame:CGRectMake(self.view.frame.size.width / 2 - 100, self.view.frame.size.height / 2 - 100, 200.0f, 200.0f)];
+		view.backgroundColor = [UIColor grayColor];
+		[self.view addSubview:view];
+	}
+	
+	if (objType == ObjTypeImageView) {
+		CommonObject * view = [[CommonObject alloc] initWithFrame:CGRectMake(self.view.frame.size.width / 2 - 100, self.view.frame.size.height / 2 - 100, 200.0f, 200.0f)];
+		view.backgroundColor = [UIColor grayColor];
+		[self.view addSubview:view];
+	}
+
 }
 
 

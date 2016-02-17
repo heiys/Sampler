@@ -144,7 +144,7 @@ static NSString *cellIdentifier = @"SampleListTableViewCell";
 #pragma mark - IBAction methods
 - (IBAction)respondsToAddScene:(id)sender
 {
-	addSceneAlert = [[UIAlertView alloc] initWithTitle:lstr(@"AddScene") message:nil delegate:self cancelButtonTitle:lstr(@"Cancel") otherButtonTitles:lstr(@"OK"), nil];
+	addSceneAlert = [[UIAlertView alloc] initWithTitle:lstr(@"NewScene") message:nil delegate:self cancelButtonTitle:lstr(@"Cancel") otherButtonTitles:lstr(@"OK"), nil];
 	addSceneAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
 	[addSceneAlert show];
 }

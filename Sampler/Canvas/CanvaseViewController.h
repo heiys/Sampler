@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "CommonObject.h"
 
 @interface CanvaseViewController : UIViewController <UIAlertViewDelegate>
 - (IBAction)respondsToAddView:(id)sender;
