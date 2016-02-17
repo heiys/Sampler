@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  Sampler
+
+  Created by SongH on 2015. 2. 2..
+  Copyright (c) 2015년 song. All rights reserved.
+*/
+
+
+"Cancel"					=	"Cancel";
+"OK"						=	"OK";
+"AddScene"					=	"Add Scene";
+"Quite"						=	"Quite?";
+"SelectMenuItem"			=	"Menu Items";
+"ViewItem"					=	"View";
+"ImageViewItem"				=	"Image View";
+"ButtonItem"				=	"Button";
