@@ -9,6 +9,14 @@
 #import "CommonObject.h"
 
 @implementation CommonObject
+
+
+	+ (instancetype)objectWithFrame:(CGRect)frame; {
+		CommonObject * instance = [[CommonObject alloc] initWithFrame:frame];
+		return instance;
+	}
+
+
 	- (instancetype) initWithFrame:(CGRect)frame {
 		if ([super initWithFrame:frame]) {
 			UILongPressGestureRecognizer * longTab = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
@@ -35,4 +43,9 @@
 			originPoint = [gestureRecognizer locationInView:self];
 		}
 	}
+@end
+
+@implementation SampleView
+
+
 @end

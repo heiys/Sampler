@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "CommonObject.h"
+#import "Sampler-Swift.h"
 
 @interface CanvaseViewController : UIViewController <UIAlertViewDelegate>
 - (IBAction)respondsToAddView:(id)sender;

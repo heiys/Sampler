@@ -25,6 +25,7 @@
 		E4B77A881A2496500072E221 /* SampleListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B77A861A2496500072E221 /* SampleListTableViewCell.m */; };
 		E4B77A891A2496500072E221 /* SampleListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4B77A871A2496500072E221 /* SampleListTableViewCell.xib */; };
 		E4B77A941A24B48B0072E221 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B77A921A24B48B0072E221 /* DetailViewController.m */; };
+		E4B94B411C76FFB70037FDA5 /* AddObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B94B401C76FFB70037FDA5 /* AddObjectViewController.swift */; };
 		E4E41A621A7F0B290097776E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4E41A611A7F0B290097776E /* Localizable.strings */; };
 		E4E41A651A7F0B850097776E /* SamplerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E41A641A7F0B850097776E /* SamplerHelper.m */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,8 @@
 		E4B77A871A2496500072E221 /* SampleListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleListTableViewCell.xib; sourceTree = "<group>"; };
 		E4B77A911A24B48B0072E221 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		E4B77A921A24B48B0072E221 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		E4B94B3F1C76FFB60037FDA5 /* Sampler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sampler-Bridging-Header.h"; sourceTree = "<group>"; };
+		E4B94B401C76FFB70037FDA5 /* AddObjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddObjectViewController.swift; sourceTree = "<group>"; };
 		E4E41A611A7F0B290097776E /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E4E41A631A7F0B850097776E /* SamplerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplerHelper.h; sourceTree = "<group>"; };
 		E4E41A641A7F0B850097776E /* SamplerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SamplerHelper.m; sourceTree = "<group>"; };
@@ -193,6 +196,7 @@
 				E485E7511A23731A00BE0A55 /* Main.storyboard */,
 				E485E7541A23731A00BE0A55 /* Images.xcassets */,
 				E485E7561A23731A00BE0A55 /* LaunchScreen.xib */,
+				E4B94B3F1C76FFB60037FDA5 /* Sampler-Bridging-Header.h */,
 				E485E7471A23731900BE0A55 /* Supporting Files */,
 			);
 			path = Sampler;
@@ -250,6 +254,7 @@
 			children = (
 				E4B77A911A24B48B0072E221 /* DetailViewController.h */,
 				E4B77A921A24B48B0072E221 /* DetailViewController.m */,
+				E4B94B401C76FFB70037FDA5 /* AddObjectViewController.swift */,
 			);
 			name = DetailView;
 			sourceTree = "<group>";
@@ -313,7 +318,7 @@
 		E485E73C1A23731900BE0A55 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = song;
 				TargetAttributes = {
 					E485E7431A23731900BE0A55 = {
@@ -424,6 +429,7 @@
 				E4B77A801A248C540072E221 /* SampleData.m in Sources */,
 				E4B77A881A2496500072E221 /* SampleListTableViewCell.m in Sources */,
 				E4423F071C746ED800F03B6A /* CommonTableViewCell.m in Sources */,
+				E4B94B411C76FFB70037FDA5 /* AddObjectViewController.swift in Sources */,
 				E4423F091C746ED800F03B6A /* CommonTableViewSection.m in Sources */,
 				E41481291A82507100F207B1 /* CanvaseViewController.m in Sources */,
 				E485E7501A23731A00BE0A55 /* RootViewController.m in Sources */,
@@ -493,6 +499,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -554,12 +561,16 @@
 			baseConfigurationReference = F68DB123E1D7B71F10737377 /* Pods-Sampler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: song Hur (LW7NFZZ8R9)";
 				GCC_PREFIX_HEADER = "Sampler-Prefix.pch";
 				INFOPLIST_FILE = Sampler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "kr.co.Song.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e4d6465d-80b4-41b1-9223-968e8892b63e";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sampler/Sampler-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -568,10 +579,13 @@
 			baseConfigurationReference = 565D4A70615DDDFB6EF0ADD0 /* Pods-Sampler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PREFIX_HEADER = "Sampler-Prefix.pch";
 				INFOPLIST_FILE = Sampler/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "kr.co.Song.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sampler/Sampler-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -589,6 +603,7 @@
 				);
 				INFOPLIST_FILE = SamplerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "song.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sampler.app/Sampler";
 			};
@@ -604,6 +619,7 @@
 				);
 				INFOPLIST_FILE = SamplerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "song.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sampler.app/Sampler";
 			};

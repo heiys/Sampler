@@ -18,4 +18,12 @@ typedef enum ObjectType {
 @interface CommonObject : UIView <UIGestureRecognizerDelegate> {
 	CGPoint originPoint;
 }
++ (instancetype)objectWithFrame:(CGRect)frame;
+
+@end
+
+@interface SampleView : CommonObject {
+	
+}
+
 @end

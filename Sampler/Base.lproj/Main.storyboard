@@ -432,5 +432,111 @@
             </objects>
             <point key="canvasLocation" x="1662" y="633"/>
         </scene>
+        <!--Add Object View Controller-->
+        <scene sceneID="aAo-ZN-5Cq">
+            <objects>
+                <viewController storyboardIdentifier="addObjectViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="E6y-7f-kQj" customClass="AddObjectViewController" customModule="Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T84-06-N8D"/>
+                        <viewControllerLayoutGuide type="bottom" id="DQ7-B7-lTS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FJX-GJ-a4f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4rX-yS-gvj" userLabel="ContentView">
+                                <rect key="frame" x="31" y="125" width="312" height="417"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dS-P3-AwK" userLabel="Button - View Type">
+                                        <rect key="frame" x="33" y="94" width="237" height="30"/>
+                                        <color key="backgroundColor" red="0.81568627449999997" green="0.81568627449999997" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Object Type">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Object Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XbB-A9-ljq">
+                                        <rect key="frame" x="33" y="35" width="237" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="E6y-7f-kQj" id="yVl-cy-wzz"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FP7-jG-7Jd">
+                                        <rect key="frame" x="33" y="155" width="237" height="30"/>
+                                        <color key="backgroundColor" red="0.83921568629999999" green="0.83921568629999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Object Color">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rpp-A1-cgY">
+                                        <rect key="frame" x="-8" y="233" width="320" height="144"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pJ8-ej-GwN">
+                                                <rect key="frame" x="71" y="18" width="179" height="108"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="X" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ofO-r6-hOI">
+                                                <rect key="frame" x="100" y="82" width="50" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="E6y-7f-kQj" id="wUO-dR-BIS"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Height" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nbX-Xo-BVx">
+                                                <rect key="frame" x="233" y="57" width="60" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="E6y-7f-kQj" id="tzz-kB-6U0"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Width" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SEi-jp-Ah7">
+                                                <rect key="frame" x="130" y="-1" width="60" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="E6y-7f-kQj" id="SiR-IV-H9m"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Y" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WQ0-c3-U76">
+                                                <rect key="frame" x="169" y="82" width="50" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="E6y-7f-kQj" id="Wk0-cw-FOV"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.23725190033783783" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="contentView" destination="4rX-yS-gvj" id="kIi-Rf-AoA"/>
+                        <outlet property="objNameTextField" destination="XbB-A9-ljq" id="4uK-Ie-22A"/>
+                        <outlet property="sampleObjHeightTextField" destination="nbX-Xo-BVx" id="N8F-Wy-rgQ"/>
+                        <outlet property="sampleObjWidthTextField" destination="SEi-jp-Ah7" id="EN2-wa-9Zv"/>
+                        <outlet property="sampleObjXpositionTextField" destination="ofO-r6-hOI" id="Y6s-r5-2f8"/>
+                        <outlet property="sampleObjYpositionTextField" destination="WQ0-c3-U76" id="Ypz-lQ-jKh"/>
+                        <outlet property="sampleObjectView" destination="pJ8-ej-GwN" id="T0Y-2U-glf"/>
+                        <outlet property="selectObjColorButton" destination="FP7-jG-7Jd" id="ekv-Yu-9fO"/>
+                        <outlet property="selectObjTypeButton" destination="2dS-P3-AwK" id="qVm-2b-5pc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpm-5W-H5C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2621.5" y="487.5"/>
+        </scene>
     </scenes>
 </document>

@@ -7,6 +7,7 @@
 //
 
 #import "CanvaseViewController.h"
+#define DEFAULT_OBJ_FRAME CGRectMake(self.view.frame.size.width / 2 - 100, self.view.frame.size.height / 2 - 100, 200.0f, 200.0f)
 
 @interface CanvaseViewController ()
 {
@@ -30,20 +31,23 @@
 #pragma mark - IBAction methods
 - (IBAction)respondsToAddView:(id)sender
 {
-	//메뉴시트 띄우기
-	UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:lstr(@"Cancel") style:UIAlertActionStyleCancel
-														 handler:nil];
-	
-	UIAlertAction* addViewAction = [UIAlertAction actionWithTitle:lstr(@"View") style:UIAlertActionStyleDefault
-														 handler:^(UIAlertAction * action) {
-															 [self addObjectInCanvas:ObjTypeView];
-														 }];
-
-	
-	UIAlertController * addMenuAlertViewController = [UIAlertController alertControllerWithTitle:lstr(@"SelectMenuItem") message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-	[addMenuAlertViewController addAction:addViewAction];
-	[addMenuAlertViewController addAction:cancelAction];
-	[self presentViewController:addMenuAlertViewController animated:YES completion:nil];
+	UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+	AddObjectViewController * controller = [storyBoard instantiateViewControllerWithIdentifier:@"addObjectViewController"];
+	[self presentViewController:controller animated:YES completion:nil];
+//	//메뉴시트 띄우기
+//	UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:lstr(@"Cancel") style:UIAlertActionStyleCancel
+//														 handler:nil];
+//	
+//	UIAlertAction* addViewAction = [UIAlertAction actionWithTitle:lstr(@"View") style:UIAlertActionStyleDefault
+//														 handler:^(UIAlertAction * action) {
+//															 [self addObjectInCanvas:ObjTypeView];
+//														 }];
+//
+//	
+//	UIAlertController * addMenuAlertViewController = [UIAlertController alertControllerWithTitle:lstr(@"SelectMenuItem") message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+//	[addMenuAlertViewController addAction:addViewAction];
+//	[addMenuAlertViewController addAction:cancelAction];
+//	[self presentViewController:addMenuAlertViewController animated:YES completion:nil];
 }
 
 #pragma mark - TapGestureRecognizer
@@ -72,13 +76,13 @@
 - (void)addObjectInCanvas:(ObjectType) objType {
 	
 	if (objType == ObjTypeView) {
-		CommonObject * view = [[CommonObject alloc] initWithFrame:CGRectMake(self.view.frame.size.width / 2 - 100, self.view.frame.size.height / 2 - 100, 200.0f, 200.0f)];
+		SampleView * view = [SampleView objectWithFrame:CGRectMake(self.view.frame.size.width / 2 - 100, self.view.frame.size.height / 2 - 100, 200.0f, 200.0f)];
 		view.backgroundColor = [UIColor grayColor];
 		[self.view addSubview:view];
 	}
-	
+
 	if (objType == ObjTypeImageView) {
-		CommonObject * view = [[CommonObject alloc] initWithFrame:CGRectMake(self.view.frame.size.width / 2 - 100, self.view.frame.size.height / 2 - 100, 200.0f, 200.0f)];
+		SampleView * view = [[SampleView alloc] initWithFrame:CGRectMake(self.view.frame.size.width / 2 - 100, self.view.frame.size.height / 2 - 100, 200.0f, 200.0f)];
 		view.backgroundColor = [UIColor grayColor];
 		[self.view addSubview:view];
 	}
